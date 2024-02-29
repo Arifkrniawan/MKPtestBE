@@ -1,0 +1,31 @@
+Tabel User:
+UserID - Primary Key untuk mengidentifikasi setiap pengguna (unik)
+Username - Nama pengguna untuk login
+Password - Kata sandi untuk login ke system
+Role - Hak akses system
+
+Table Produk:
+ProductID - Primary Key untuk mengidentifikasi setiap produk (unik)
+ProductName - Nama produk
+Price - Harga produk
+Stock - Jumlah stock yang tersedia
+
+Table Customer:
+CustomerName - Nama pelanggan
+PhoneNumber - Nomor telepon pelanggan
+Email - Alamat email pelanggan
+
+Table Penjualan:
+SaleID - Primay Key untuk mengidentifikasi setiap transaksi penjualan (unik)
+UserID - Foreign Key yang menghubungkan transaksi penjualan dengan pengguna yang melakukan penjualan
+CustomerID - Foreign Key yang menghubungkan transaksi penjualan dengan pelanggan yang melakukan pembelian
+SaleDate - Tanggal dan waktu penjualan
+TotalAmount - Jumlah total penjualan
+PaymentMethod - Metode pembayaran yang digunakan (tunai, kartu kredit, dll)
+
+Tabel Detail Penjualan:
+SaleDetailID - Primay Key untuk mengidentifikasi setiap detail penjualan (unik)
+SaleID - Foreign Key yang menghubungkan detail penjualan dengan transaksi penjualan yang terkait
+ProductID - Foreign Key yang menghubungkan detail penjualan dengan produk yang terjual
+Quantity - Jumlah produk yang terjual dalam transaksi ini
+Subtotal - Jumlah subtotal untuk produk tertentu dalam transaksi ini
